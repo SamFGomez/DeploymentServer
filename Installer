@@ -1,0 +1,42 @@
+#!/bin/bash
+
+add(){
+	while true;  do
+		read -p "FileName: " file
+		if [ "$file" = "" ];
+		then
+			break
+		fi
+		cp "$file" "/home/samg/installer/staging"
+	done
+}
+
+push(){
+	destination=$(awk -F "=" '/PUSH_LOCATION/ {print $2}' /home/samg/installer/Installer.ini)
+	sshpass -p "UbuntuPW" scp -r /home/samg/installer/staging/* "$destination"
+	rm /home/samg/installer/staging/*
+}
+
+pull(){
+	origin=$(awk -F "=" '/PULL_LOCATION/ {print $2}' /home/samg/installer/Installer.ini)
+	sshpass -p "UbuntuPW" scp -r "$origin/*" "/home/samg/ForecastrFiles/"
+}
+
+while true; do
+	read -p "Command: " command
+	case "$command" in
+		"push")
+			push
+	
+		;;
+		"add")
+			add
+		;;
+		"pull")
+			pull
+		;;
+		"exit")
+			exit
+		;;	
+	esac
+done
