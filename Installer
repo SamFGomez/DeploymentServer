@@ -20,25 +20,23 @@ push(){
 }
 
 pull(){
-	origin=$(awk -F "=" '/PULL_LOCATION/ {print $2}' /home/samg/installer/Installer.ini)
 	sshpass -p "password" scp -r "$origin/*" "/home/samg/ForecastrFiles/"
 }
 
-while true; do
-	read -p "Command: " command
-	case "$command" in
-		"push")
-			push
-	
-		;;
-		"add")
-			add
-		;;
-		"pull")
-			pull
-		;;
-		"exit")
-			exit
-		;;	
-	esac
-done
+#while true; do
+##	read -p "Command: " command
+#	case "$command" in
+#		"push")
+#			push	
+#		;;
+#		"add")
+#			add
+#		;;
+#		"pull")
+#			pull
+#		;;
+#		"exit")
+#			exit
+#		;;	
+#	esac
+#done

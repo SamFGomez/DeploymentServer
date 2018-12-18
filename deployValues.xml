@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<variables>
+	<machine machine_type = "Client_DEV" file_location = "/home/jlhourcadeqa/ForecastrFiles/Nontested/Client/*" destination_IP = "jovana@192.168.1.12:" username = "jovana" password = "Jovana"></machine>
+	<machine machine_type = "Database_DEV" file_location = "/home/jlhourcadeqa/ForecastrFiles/Nontested/Database/*" destination_IP = "ananyakudugi@192.168.1.13:" username = "ananyakudugi" password = "Ananya12!"></machine>
+	<machine machine_type = "DMZ_DEV" file_location = "/home/jlhourcadeqa/ForecastrFiles/Nontested/DMZ/*" destination_IP = "dmz@192.168.1.14:" username = "dmz" password = "password"></machine>
+	<machine machine_type = "Broker_DEV" file_location = "/home/jlhourcadeqa/ForecastrFiles/Nontested/Broker/*" destination_IP = "jlhourcadeqa@192.168.1.15:" username = "jlhourcadeqa" password = "password"></machine>
+	<machine machine_type = "Client_QA" file_location = "/home/jlhourcadeqa/ForecastrFiles/Tested/Client/*" destination_IP = "jovana@192.168.1.7:" username = "jovana" password = "Jovana"></machine>
+	<machine machine_type = "Database_QA" file_location = "/home/jlhourcadeqa/ForecastrFiles/Tested/Database/*" destination_IP = "ananyakudugi@192.168.1.8:" username = "ananyakudugi" password = "Ananya12!"></machine>
+	<machine machine_type = "DMZ_QA" file_location = "/home/jlhourcadeqa/ForecastrFiles/Tested/DMZ/*" destination_IP = "dmz@192.168.1.9:" username = "dmz" password = "password"></machine>
+	<machine machine_type = "Broker_QA" file_location = "/home/jlhourcadeqa/ForecastrFiles/Tested/Broker/*" destination_IP = "jlhourcadeqa@192.168.1.10:" username = "jlhourcadeqa" password = "password"></machine>
+</variables>
+
+
+
+
+
+
+
+
